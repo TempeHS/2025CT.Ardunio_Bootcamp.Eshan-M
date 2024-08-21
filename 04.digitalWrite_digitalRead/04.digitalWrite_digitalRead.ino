@@ -28,12 +28,16 @@
     https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/04.digitalWrite_digitalRead/Bootcamp-digitalRead.png
     https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/04.digitalWrite_digitalRead/Bootcamp-digitalWrite.png
 */
-
-
+static unsigned int ledpin = 6;
+static unsigned int buttonPin = 5;
+bool readPin;
 void setup() {
   
-}
+  pinmode(ledpin, OUTPUT);
+  pinmode(buttonPin, INPUT);
 
 void loop() {
-  
+ readPin = digitalRead(buttonPin); 
+ writeValue = readPin;
+ digitalWrite(ledPin,writeValue);
 }
