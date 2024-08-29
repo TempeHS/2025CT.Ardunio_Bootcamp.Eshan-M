@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author: Eshan M 
 
   Learning Intention:
   The students will learn what 'pulse width modulation' is and how to use it to write
@@ -21,12 +21,18 @@
     https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/07.pulseWidthModulation/Bootcamp-PWMOutput.png
 */
 
+static unsigned int ledPin = 3;
 
+void setup() 
+ {
+  Serial.begin(9600);
+  Serial.println("debug");
+  pinMode(ledPin, OUTPUT);
+ }
 
-void setup() {
-  
-}
-
-void loop() {
-  
+void loop()  
+{
+   int val = analogRead(A3);
+   val = val / 4;
+  analogWrite(ledPin, val);
 }
