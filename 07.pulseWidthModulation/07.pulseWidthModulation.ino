@@ -36,3 +36,20 @@ void loop()
    val = val / 4;
   analogWrite(ledPin, val);
 }
+
+unsigned static int rLed = 11;
+unsigned static int bLed = 10;
+unsigned static int gLed = 9;
+void setup()
+{
+  pinMode(rLed, OUTPUT);
+  pinMode(bLed, OUTPUT);
+  pinMode(gLed, OUTPUT);
+}
+
+void loop()
+{
+   analogWrite(rLed,225);
+   analogWrite(gLed,225);  
+   analogWrite(bLed,225);
+}
