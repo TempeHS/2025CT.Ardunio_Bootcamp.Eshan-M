@@ -17,6 +17,21 @@
     https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/09.workingWithTime/Bootcamp-workingWithTime.png
 */
 
+ static unsigned int blueLED = 6;
+ static unsigned int greenLED = 2;
+ unsigned int blueLEDState = LOW;
+ unsigned int greenLEDState = LOW;
+
+
+// Generally, you should use "unsigned long" for variables that hold time
+// the value will quickly become too large for an int to store
+ unsigned long blueLEDPreviousMillis = 0;
+ unsigned long greenLEDPreviousMillis = 0;
+ 
+ // use long so you can mathamaticlly compare with variable previousMillis witout comparsiom 
+ const unsigned long blueLEDPinterval = 2000;
+ const unsigned long greenLEDPinterval = 9000;
+
 
 void setup() {
   
