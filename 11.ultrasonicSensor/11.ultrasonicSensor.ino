@@ -39,18 +39,18 @@ void setup() {
 
 void loop() {
   Serial.println(pav_the_sensor.distanceRead());
-  if (pav_the_sensor.distanceRead() <= 10); 
+  if (pav_the_sensor.distanceRead() <= 10)
   { 
-    myservo.write(100);
+    myservo.write(180);
   }
     else {
     myservo.write(10);
 
-  }
+  }         
   
 
-  int val = analogRead(potpin);
-  val = map(val, 0, 1023, 180, 0);
-  myservo.write(val);
+  // int val = analogRead(potpin);
+  // val = map(val, 0, 1023, 180, 0);
+  // myservo.write(val);
   
 }
